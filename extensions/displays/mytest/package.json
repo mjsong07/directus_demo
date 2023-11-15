@@ -1,0 +1,28 @@
+{
+	"name": "directus-extension-mytest",
+	"description": "Please enter a description for your extension",
+	"icon": "extension",
+	"version": "1.0.0",
+	"keywords": [
+		"directus",
+		"directus-extension",
+		"directus-custom-display"
+	],
+	"type": "module",
+	"directus:extension": {
+		"type": "display",
+		"path": "./index.js",
+		"source": "src/index.ts",
+		"host": "^10.1.14"
+	},
+	"scripts": {
+		"build": "directus-extension build",
+		"dev": "directus-extension build -w --no-minify",
+		"link": "directus-extension link"
+	},
+	"devDependencies": {
+		"@directus/extensions-sdk": "10.1.14",
+		"typescript": "^5.2.2",
+		"vue": "^3.3.8"
+	}
+}

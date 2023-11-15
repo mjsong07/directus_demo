@@ -1,0 +1,28 @@
+{
+	"name": "directus-extension-mytest",
+	"description": "Please enter a description for your extension",
+	"icon": "extension",
+	"version": "1.0.0",
+	"keywords": [
+		"directus",
+		"directus-extension",
+		"directus-custom-bundle"
+	],
+	"type": "module",
+	"directus:extension": {
+		"type": "bundle",
+		"path": "./index.js",
+		"source": "src/index.ts",
+		"entries": [ ],
+		"host": "^10.1.14"
+	},
+	"scripts": {
+		"build": "directus-extension build",
+		"dev": "directus-extension build -w --no-minify",
+		"link": "directus-extension link",
+		"add": "directus-extension add"
+	},
+	"devDependencies": {
+		"@directus/extensions-sdk": "10.1.14"
+	}
+}
