@@ -1,0 +1,13 @@
+version: '3.8'
+
+services:
+  directus:
+    image: directus/directus:latest
+    ports:
+      - 8055:8055
+    environment:
+      DIRECTUS_SECRET: 'mysecret'
+      DB_CLIENT: 'sqlite3'
+      DB_FILENAME: '/data/database.db' # 使用绝对路径 如果无法访问请设置 权限 chmod -R 777 ./data
+    volumes:
+      - ./data:/data
